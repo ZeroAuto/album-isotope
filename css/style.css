@@ -2,6 +2,10 @@ body {
     font-family: Arial;
 }
 
+.portfolioFilter {
+    width: 200px;
+}
+
 .portfolioFilter a { 
     margin-right: 10px; 
 	color:#666;
@@ -41,4 +45,27 @@ img {
     -webkit-transition-property: -webkit-transform, opacity;
     -moz-transition-property: -moz-transform, opacity;
     transition-property: transform, opacity;
+}
+
+#sidebar {
+    width: 200px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 5px 0 0 5px;
+}
+
+.cover img {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    border: solid black 1px;
+}
+
+.cover img:hover {
+    border: solid green 2px;
+}
+
+.cat-btn {
+
 }
