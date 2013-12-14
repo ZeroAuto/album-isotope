@@ -1,5 +1,10 @@
 body {
     font-family: Arial;
+    background: black;
+}
+
+h1 {
+    color:#666;
 }
 
 .portfolioFilter {
@@ -63,13 +68,13 @@ img {
 }
 
 .cover img:hover {
-    border: solid blue 2px;
+    /*border: solid blue 2px;*/
     /*-webkit-filter: grayscale(100%);*/
     /*-webkit-transform: rotate(180deg); 
     -moz-transform: rotate(180deg); 
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg); */
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .cat-btn {
