@@ -63,7 +63,13 @@ img {
 }
 
 .cover img:hover {
-    border: solid green 2px;
+    border: solid blue 2px;
+    /*-webkit-filter: grayscale(100%);*/
+    /*-webkit-transform: rotate(180deg); 
+    -moz-transform: rotate(180deg); 
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg); */
+    opacity: 0.3;
 }
 
 .cat-btn {
