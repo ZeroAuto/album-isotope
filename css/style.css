@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-    color:#555;
+    color:#777;
 }
 
 .portfolioFilter {
@@ -13,7 +13,7 @@ h1 {
 
 .portfolioFilter a { 
     margin-right: 10px; 
-	color:#555;
+	color:#777;
 	text-decoration:none;
 }
 
@@ -60,6 +60,10 @@ img {
     padding: 5px 0 0 5px;
 }
 
+.cover {
+    display:block;
+}
+
 .cover img {
     height: 250px;
     width: 250px;
@@ -67,16 +71,20 @@ img {
     border: solid black 1px;
 }
 
-.cover img:hover {
-    /*border: solid blue 2px;*/
-    /*-webkit-filter: grayscale(100%);*/
-    /*-webkit-transform: rotate(180deg); 
-    -moz-transform: rotate(180deg); 
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg); */
+.cover:hover img {
     opacity: 0.2;
 }
 
-.cat-btn {
+.album-name {
+    visibility: hidden;
+    position: absolute;
+    color:#777;
+    margin: 10px;
+    top: 0;
+    left: 0;
+}
 
+.cover:hover .album-name {
+    visibility: visible;
+    color: white;
 }
