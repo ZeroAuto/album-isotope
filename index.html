@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Isotope</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="js/jquery.isotope.js" type="text/javascript"></script> 
+</head>
+<body>
+
+<h1>jQuery Isotope</h1>
+ 
+<div class="portfolioFilter">
+
+	<a href="#" data-filter="*" class="current">All Categories</a>
+	<a href="#" data-filter=".rollingstones">Rolling Stones</a>
+	<a href="#" data-filter=".okkervilriver">Okkervil River</a>
+	<a href="#" data-filter=".wolfparade">Wold Parade</a>
+	<a href="#" data-filter=".wilco">Wilco</a>
+	<a href="#" data-filter=".replacements">The Replacements</a>
+	<a href="#" data-filter=".faces">The Faces</a>
+	<a href="#" data-filter=".2000s">2000s</a>
+	<a href="#" data-filter=".1990s">1990s</a>
+	<a href="#" data-filter=".1980s">1980s</a>
+	<a href="#" data-filter=".1970s">1970s</a>
+	<a href="#" data-filter=".1960s">1960s</a>
+
+</div>
+
+<div class="portfolioContainer">
+
+	<div class="rollingstones 1970s">
+		<img src="images/Rolling Stones - Exile on Main Street.jpg" alt="image">
+	</div>
+	
+	<div class="rollingstones 1960s">
+		<img src="images/Rolling Stones - Let it Bleed.jpg" alt="image">
+	</div>	
+
+	<div class="okkervilriver 2000s">
+		<img src="images/Okkervil River - Black Sheep Boy.jpg" alt="image">
+	</div>
+	
+	<div class="okkervilriver 1990s">
+		<img src="images/Okkervil River - Don't Fall in Love With Everyone You See.jpg" alt="image">
+	</div>
+
+	<div class="replacements 1980s">
+		<img src="images/The Replacements - Tim.jpg" alt="image">
+	</div>
+
+	<div class="wilco 1990s">
+		<img src="images/Wilco Being There.jpg" alt="image">
+	</div>
+
+	<div class="wilco 2000s">
+		<img src="images/Wilco Yankee Hotel Foxtrot.jpg" alt="image">
+	</div>	
+	
+	<div class="wolfparade 2000s">
+		<img src="images/Wolf Parade - Apologies.jpg" alt="image">
+	</div>	
+	
+</div>
+ 
+<script type="text/javascript">
+
+$(window).load(function(){
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    }); 
+});
+
+</script>
+ 
+ <!-- Google Analytics -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-21422990-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	
+</script>
+ 
+</body>
+</html>
